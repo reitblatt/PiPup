@@ -30,7 +30,7 @@ sealed class PopupView(context: Context, val popup: PopupProps) : LinearLayout(c
             minimumWidth = 240
         }
 
-        setPadding(20,20,20,20)
+//        setPadding(20,20,20,20)
 
         val title = findViewById<TextView>(R.id.popup_title)
         val message = findViewById<TextView>(R.id.popup_message)
