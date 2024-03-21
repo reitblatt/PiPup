@@ -3,11 +3,11 @@ package nl.rogro82.pipup
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
+import android.media.AudioManager
 import android.net.Uri
-import android.util.Log
+import android.os.Build
 import android.view.Gravity
 import android.view.View
-import android.view.ViewGroup
 import android.view.WindowManager
 import android.webkit.WebView
 import android.widget.*
@@ -89,6 +89,9 @@ sealed class PopupView(context: Context, val popup: PopupProps) : LinearLayout(c
                         }
 
                         this@Video.visibility = View.VISIBLE
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                            this@Video.mVideoView.setAudioFocusRequest(AudioManager.AUDIOFOCUS_NONE)
+                        }
                     }
                 }
 

@@ -8,7 +8,7 @@ android {
     compileSdkVersion 31
     defaultConfig {
         applicationId "nl.rogro82.pipup"
-        minSdkVersion 24
+        minSdkVersion 26
         targetSdkVersion 31
         versionCode 1
         versionName "1"
